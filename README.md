@@ -1,7 +1,9 @@
 # Customer Value Analytics
 
 **Author**: Marco Boso 
+
 **Date**: September 22, 2025  
+
 **Project Type**: Customer Analytics / Retention and Revenue
 
 ## Overview
