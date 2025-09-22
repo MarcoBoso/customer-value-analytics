@@ -1,0 +1,251 @@
+ID Fila,ID Pedido,Fecha de Pedido,Fecha de Envío,Modo de Envío,ID Cliente,Nombre del Cliente,Segmento,País,Ciudad,Provincia/Estado,Código Postal,Región,ID Producto,Categoría,Subcategoría,Nombre del Producto,Ventas,Cantidad,Descuento,Beneficio
+1,O-1001,2025-04-04,2025-04-05,Standard Class,C-1094,Cornelio Perez Acuña,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-275,Watches,Watche,Luxury Watch Athens,17490.14,2,0.0,5403.39
+2,O-1002,2024-11-09,2024-11-10,Standard Class,C-1064,Antonietta Nibali,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-200,Coats,Coat,Wool Coat Madrid,2817.78,1,0.1,1132.96
+3,O-1003,2025-01-19,2025-01-20,Standard Class,C-1097,Mauricio Iñiguez Vall,Consumer,Greece,Athens,Attica,10500,Attica,P-277,Shoes,Shoe,Luxury Heels Florence,997.15,1,0.0,517.44
+4,O-1004,2024-12-21,2024-12-23,Standard Class,C-1010,Pilar Castelló-Sainz,VIP,Spain,Madrid,Madrid,28000,Madrid,P-205,Watches,Watche,Luxury Watch Athens,9770.32,1,0.05,5818.87
+5,O-1005,2025-06-16,2025-06-17,Standard Class,C-1048,Leonel Marí-Zabala,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-226,Shoes,Shoe,Luxury Heels Florence,864.88,1,0.0,417.51
+6,O-1006,2025-03-28,2025-03-31,Standard Class,C-1093,Noémi Lenoir,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-287,Watches,Watche,Luxury Watch Athens,7648.79,1,0.0,2820.22
+7,O-1007,2024-10-03,2024-10-05,Standard Class,C-1051,Hilda Buendía Iriarte,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-250,Watches,Watche,Luxury Watch Milan,20737.64,2,0.0,7869.19
+8,O-1008,2025-08-20,2025-08-23,Standard Class,C-1071,Sebastián Arias Zamorano,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-217,Shoes,Shoe,Luxury Sneakers Paris,2030.23,2,0.0,1069.39
+9,O-1009,2025-03-25,2025-03-26,Standard Class,C-1080,Marcelle de la Gaillard,Corporate,Greece,Athens,Attica,10500,Attica,P-276,Coats,Coat,Wool Coat Madrid,5634.0,2,0.05,3331.52
+10,O-1010,2025-05-19,2025-05-22,Standard Class,C-1092,Giacomo Montalti,Corporate,Spain,Valencia,Valencia,46000,Valencia,P-255,Bags,Bag,Leather Bag Roma,2445.32,1,0.1,735.98
+11,O-1011,2024-09-27,2024-09-30,Standard Class,C-1097,Catherine Gillet-Hardy,Corporate,Italy,Florence,Tuscany,50100,Tuscany,P-219,Watches,Watche,Luxury Watch Athens,7304.87,1,0.0,3373.49
+12,O-1012,2025-01-21,2025-01-24,Standard Class,C-1041,Σταμάτιος-Μένανδρος Μασγαλάς,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-230,Scarves,Scarve,Silk Scarf Venezia,553.43,1,0.0,287.55
+13,O-1013,2025-07-21,2025-07-24,Standard Class,C-1098,Lucie Le Gaillard,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-227,Shoes,Shoe,Luxury Heels Florence,889.48,1,0.05,373.31
+14,O-1014,2025-07-06,2025-07-08,Standard Class,C-1066,Θεόδωρος Δημόπουλος,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-275,Shoes,Shoe,Luxury Sneakers Paris,613.01,1,0.0,185.23
+15,O-1015,2025-07-25,2025-07-26,Standard Class,C-1008,Tonino Zaccardo-Calbo,VIP,Italy,Rome,Lazio,00100,Lazio,P-227,Shoes,Shoe,Luxury Heels Florence,577.14,1,0.1,215.22
+16,O-1016,2024-12-15,2024-12-17,Standard Class,C-1024,Sig.ra Marina Mortati,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-259,Coats,Coat,Wool Coat Madrid,2918.86,1,0.0,928.73
+17,O-1017,2025-01-25,2025-01-26,Standard Class,C-1031,Philippine Germain,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-235,Coats,Coat,Cashmere Coat Roma,5387.17,2,0.0,3029.45
+18,O-1018,2025-05-16,2025-05-18,Standard Class,C-1070,Marcantonio Rapisardi,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-252,Scarves,Scarve,Silk Scarf Venezia,1136.56,2,0.1,413.85
+19,O-1019,2025-05-06,2025-05-07,Standard Class,C-1021,Δημοκράτης Δημησκής,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-254,Coats,Coat,Wool Coat Madrid,5491.98,2,0.0,1960.47
+20,O-1020,2025-07-07,2025-07-08,Standard Class,C-1074,Marissa Corradi,Corporate,Italy,Milan,Lombardy,20100,Lombardy,P-264,Jewelry,Jewelry,Diamond Earrings Nice,3587.7,1,0.0,2110.41
+21,O-1021,2025-02-05,2025-02-06,Standard Class,C-1008,Sig.ra Dina Marinetti,Corporate,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-231,Bags,Bag,Leather Bag Barcelona,3086.26,1,0.0,1314.03
+22,O-1022,2025-02-11,2025-02-13,Standard Class,C-1026,Marciano Loreto Peinado Vazquez,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-258,Watches,Watche,Luxury Watch Milan,7661.34,1,0.0,2319.81
+23,O-1023,2025-06-03,2025-06-04,Standard Class,C-1068,Dominique-Sabine François,Corporate,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-247,Bags,Bag,Leather Bag Milano,2527.01,1,0.0,1090.29
+24,O-1024,2025-01-03,2025-01-06,Standard Class,C-1083,Tonino Trapani,Corporate,Spain,Barcelona,Catalonia,08000,Catalonia,P-214,Scarves,Scarve,Silk Scarf Athens,457.53,1,0.0,174.64
+25,O-1025,2025-03-05,2025-03-08,Standard Class,C-1043,Corinne Samson de la Georges,Corporate,Spain,Seville,Andalusia,41000,Andalusia,P-211,Shoes,Shoe,Luxury Sneakers Paris,1554.85,2,0.05,487.02
+26,O-1026,2025-01-11,2025-01-12,Standard Class,C-1081,Carlos Moliner Amor,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-214,Jewelry,Jewelry,Gold Bracelet Monaco,4588.74,1,0.0,2127.69
+27,O-1027,2025-03-20,2025-03-23,Standard Class,C-1070,Bertrand Mahe,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-245,Shoes,Shoe,Luxury Sneakers Paris,727.35,1,0.0,363.73
+28,O-1028,2025-09-02,2025-09-05,Standard Class,C-1052,Étienne Rossi,VIP,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-203,Scarves,Scarve,Silk Scarf Athens,605.69,1,0.05,323.87
+29,O-1029,2024-09-30,2024-10-03,Standard Class,C-1094,Robert Aubry-Martineau,Consumer,Italy,Naples,Campania,80100,Campania,P-228,Bags,Bag,Leather Bag Roma,2033.77,1,0.1,823.47
+30,O-1030,2025-08-19,2025-08-20,Standard Class,C-1003,Jean Moulin,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-282,Shoes,Shoe,Luxury Heels Florence,1626.87,2,0.05,946.47
+31,O-1031,2025-07-20,2025-07-22,Standard Class,C-1022,Nazario Héctor Cañete Navarro,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-255,Watches,Watche,Luxury Watch Milan,6387.7,1,0.1,3640.04
+32,O-1032,2024-10-09,2024-10-11,Standard Class,C-1005,Ευθυμία Σακελλαρίου,Consumer,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-285,Coats,Coat,Cashmere Coat Roma,3919.83,1,0.05,1956.06
+33,O-1033,2025-04-03,2025-04-06,Standard Class,C-1038,Calixta Cecilia Infante Cañellas,Corporate,Spain,Seville,Andalusia,41000,Andalusia,P-270,Watches,Watche,Luxury Watch Milan,7979.75,1,0.0,3400.44
+34,O-1034,2025-03-16,2025-03-19,Standard Class,C-1095,Emmanuelle Andre-Thibault,Corporate,Spain,Seville,Andalusia,41000,Andalusia,P-238,Jewelry,Jewelry,Gold Bracelet Monaco,3653.83,1,0.0,1567.37
+35,O-1035,2025-05-29,2025-05-31,Standard Class,C-1056,Παντελής Αγαλιώτης,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-236,Watches,Watche,Luxury Watch Athens,9233.82,1,0.0,5037.3
+36,O-1036,2025-08-17,2025-08-20,Standard Class,C-1039,Honoré Fernandes,VIP,France,Paris,Île-de-France,75000,Île-de-France,P-260,Bags,Bag,Leather Bag Milano,1810.5,1,0.1,768.25
+37,O-1037,2025-08-21,2025-08-24,Standard Class,C-1089,Χαρά Χιωτίδου,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-296,Watches,Watche,Luxury Watch Athens,7481.97,1,0.1,2735.8
+38,O-1038,2025-02-19,2025-02-20,Standard Class,C-1071,Antoinette Le Masson,VIP,Italy,Naples,Campania,80100,Campania,P-285,Scarves,Scarve,Silk Scarf Athens,363.63,1,0.1,175.92
+39,O-1039,2025-02-22,2025-02-25,Standard Class,C-1057,Georges Bertrand,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-281,Shoes,Shoe,Luxury Sneakers Paris,630.69,1,0.1,307.79
+40,O-1040,2025-03-24,2025-03-26,Standard Class,C-1009,Macaria Miró-Dominguez,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-217,Jewelry,Jewelry,Gold Bracelet Monaco,4657.49,1,0.0,1932.44
+41,O-1041,2025-03-13,2025-03-16,Standard Class,C-1027,Germana Farnese-Pizzo,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-226,Coats,Coat,Cashmere Coat Roma,6424.62,2,0.1,3671.36
+42,O-1042,2024-11-16,2024-11-19,Standard Class,C-1048,Κλεάνθης Κιουπλιώτης,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-268,Coats,Coat,Wool Coat Madrid,2957.12,1,0.1,1081.79
+43,O-1043,2025-01-06,2025-01-08,Standard Class,C-1003,Ευθαλία-Θεοδώρα Μωραΐτη,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-279,Coats,Coat,Cashmere Coat Roma,2827.96,1,0.1,1350.54
+44,O-1044,2025-09-11,2025-09-12,Standard Class,C-1082,Γεωργία Λιάνου,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-248,Bags,Bag,Leather Bag Roma,2379.56,1,0.0,1038.46
+45,O-1045,2025-08-07,2025-08-09,Standard Class,C-1035,Σιρανούς Κοντάκος,Consumer,Italy,Naples,Campania,80100,Campania,P-269,Bags,Bag,Leather Bag Barcelona,1813.16,1,0.05,665.91
+46,O-1046,2025-03-06,2025-03-09,Standard Class,C-1005,Simonetta Alfieri,VIP,France,Paris,Île-de-France,75000,Île-de-France,P-230,Jewelry,Jewelry,Gold Bracelet Monaco,3531.71,1,0.1,1768.81
+47,O-1047,2024-10-03,2024-10-05,Standard Class,C-1089,Mario Villa Ros,Corporate,France,Paris,Île-de-France,75000,Île-de-France,P-213,Scarves,Scarve,Silk Scarf Athens,526.24,1,0.05,248.77
+48,O-1048,2025-09-20,2025-09-22,Standard Class,C-1091,Charlotte Didier,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-287,Watches,Watche,Luxury Watch Milan,9585.68,1,0.0,3874.16
+49,O-1049,2025-08-27,2025-08-30,Standard Class,C-1047,Patrizia Giorgetti-Sagredo,Corporate,Spain,Barcelona,Catalonia,08000,Catalonia,P-213,Coats,Coat,Wool Coat Madrid,6406.44,2,0.05,3143.48
+50,O-1050,2024-11-12,2024-11-15,Standard Class,C-1019,Μεταξία Καραογλάνη,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-293,Coats,Coat,Wool Coat Madrid,2202.56,1,0.05,1223.55
+51,O-1051,2025-07-01,2025-07-03,Standard Class,C-1057,Raymond Maillot de Pasquier,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-241,Bags,Bag,Leather Bag Roma,2366.67,1,0.1,860.61
+52,O-1052,2025-08-13,2025-08-15,Standard Class,C-1035,José Ángel Duque Ferrán,Corporate,France,Paris,Île-de-France,75000,Île-de-France,P-262,Scarves,Scarve,Silk Scarf Athens,505.34,1,0.1,249.52
+53,O-1053,2025-01-19,2025-01-21,Standard Class,C-1002,Priscilla Sobrero-Correr,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-260,Shoes,Shoe,Luxury Heels Florence,718.62,1,0.1,430.45
+54,O-1054,2025-03-27,2025-03-29,Standard Class,C-1089,Συμεών Βαρδάκης,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-224,Bags,Bag,Leather Bag Barcelona,2744.67,1,0.0,1435.09
+55,O-1055,2024-12-03,2024-12-04,Standard Class,C-1027,Σεβαστή Βακουφτσή,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-229,Scarves,Scarve,Silk Scarf Athens,703.1,1,0.0,274.69
+56,O-1056,2025-04-03,2025-04-05,Standard Class,C-1005,Giancarlo Morellato-Tutino,Corporate,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-273,Bags,Bag,Leather Bag Milano,2585.26,1,0.1,1146.86
+57,O-1057,2024-09-23,2024-09-24,Standard Class,C-1006,Pepito Joan Paniagua Cazorla,VIP,Greece,Athens,Attica,10500,Attica,P-262,Bags,Bag,Leather Bag Roma,2164.31,1,0.0,747.81
+58,O-1058,2025-07-27,2025-07-28,Standard Class,C-1031,Martino Campanella-Nibali,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-257,Jewelry,Jewelry,Diamond Earrings Nice,8912.5,2,0.05,4973.62
+59,O-1059,2025-03-22,2025-03-24,Standard Class,C-1072,Sig. Virgilio Giacometti,Corporate,Italy,Rome,Lazio,00100,Lazio,P-233,Watches,Watche,Luxury Watch Athens,8496.9,1,0.0,3160.5
+60,O-1060,2025-06-11,2025-06-12,Standard Class,C-1000,Κωστούλα Ξηροτύρη,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-236,Bags,Bag,Leather Bag Milano,2601.2,1,0.1,835.91
+61,O-1061,2025-08-30,2025-09-01,Standard Class,C-1100,Yves Lefebvre,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-209,Shoes,Shoe,Luxury Sneakers Paris,828.12,1,0.0,445.35
+62,O-1062,2025-06-29,2025-07-01,Standard Class,C-1015,Ινώ Βαζούρα,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-256,Jewelry,Jewelry,Diamond Earrings Nice,4814.34,1,0.0,2728.9
+63,O-1063,2025-07-31,2025-08-03,Standard Class,C-1032,Niccolò Tassoni,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-297,Jewelry,Jewelry,Gold Bracelet Monaco,3253.44,1,0.1,1482.56
+64,O-1064,2024-12-27,2024-12-29,Standard Class,C-1023,Φαίδων Καρατζίκος,Corporate,Greece,Athens,Attica,10500,Attica,P-252,Coats,Coat,Wool Coat Madrid,2471.8,1,0.05,1238.47
+65,O-1065,2025-02-21,2025-02-23,Standard Class,C-1052,Θεόδωρος Μπακοστεργίου,Consumer,Greece,Athens,Attica,10500,Attica,P-240,Coats,Coat,Cashmere Coat Roma,3425.95,1,0.05,1146.93
+66,O-1066,2025-03-30,2025-04-02,Standard Class,C-1000,Αλεξία Παπαθωμά,Consumer,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-280,Jewelry,Jewelry,Diamond Earrings Nice,12712.48,2,0.0,4590.06
+67,O-1067,2025-03-07,2025-03-09,Standard Class,C-1056,Παναγιώτης Τζιόρτζιος,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-270,Shoes,Shoe,Luxury Sneakers Paris,1778.4,2,0.0,653.4
+68,O-1068,2025-07-08,2025-07-10,Standard Class,C-1015,Inès Chauvet-Bourgeois,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-260,Coats,Coat,Wool Coat Madrid,3331.59,1,0.1,1550.45
+69,O-1069,2025-06-23,2025-06-24,Standard Class,C-1076,Océane Le Gall,VIP,Spain,Seville,Andalusia,41000,Andalusia,P-200,Shoes,Shoe,Luxury Heels Florence,906.53,1,0.05,499.72
+70,O-1070,2025-05-12,2025-05-13,Standard Class,C-1057,Θεολογία-Ευπραξία Χρυσικάκη,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-289,Shoes,Shoe,Luxury Sneakers Paris,722.91,1,0.1,267.53
+71,O-1071,2025-07-23,2025-07-24,Standard Class,C-1040,Ευδόξιος Καλαργυρός,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-263,Watches,Watche,Luxury Watch Athens,8542.09,1,0.0,3849.81
+72,O-1072,2025-06-08,2025-06-09,Standard Class,C-1056,Dario Manacorda,Corporate,Greece,Athens,Attica,10500,Attica,P-252,Watches,Watche,Luxury Watch Athens,10307.05,1,0.0,4543.83
+73,O-1073,2025-04-06,2025-04-08,Standard Class,C-1079,Λουκάς Παπαγεωργίου,Corporate,Spain,Seville,Andalusia,41000,Andalusia,P-269,Shoes,Shoe,Luxury Heels Florence,894.63,1,0.0,331.4
+74,O-1074,2024-12-29,2024-12-30,Standard Class,C-1095,Luchino Endrizzi-Acerbi,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-288,Coats,Coat,Cashmere Coat Roma,3982.32,1,0.0,1249.64
+75,O-1075,2024-11-29,2024-12-01,Standard Class,C-1045,Clemente de Arana,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-221,Jewelry,Jewelry,Gold Bracelet Monaco,2404.2,1,0.0,1160.86
+76,O-1076,2025-08-16,2025-08-19,Standard Class,C-1087,Charlotte de la Lambert,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-258,Coats,Coat,Wool Coat Madrid,3610.95,1,0.0,2057.06
+77,O-1077,2024-09-22,2024-09-24,Standard Class,C-1086,Auguste Bruneau du Mercier,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-288,Watches,Watche,Luxury Watch Milan,7317.51,1,0.1,4050.91
+78,O-1078,2025-06-13,2025-06-15,Standard Class,C-1061,Paulina Schiaparelli-Nonis,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-202,Watches,Watche,Luxury Watch Milan,14347.83,2,0.05,4339.21
+79,O-1079,2025-08-30,2025-09-02,Standard Class,C-1095,Σαμουήλ Φωκάς,VIP,Spain,Madrid,Madrid,28000,Madrid,P-228,Jewelry,Jewelry,Diamond Earrings Nice,4837.17,1,0.05,2434.69
+80,O-1080,2024-10-29,2024-11-01,Standard Class,C-1012,Concetta Cheda,Consumer,Greece,Athens,Attica,10500,Attica,P-293,Jewelry,Jewelry,Diamond Earrings Nice,3012.43,1,0.0,1725.79
+81,O-1081,2025-01-14,2025-01-17,Standard Class,C-1053,Marine Gauthier,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-261,Scarves,Scarve,Silk Scarf Athens,549.13,1,0.05,297.23
+82,O-1082,2025-03-11,2025-03-12,Standard Class,C-1018,Mathilde Guillaume,VIP,Greece,Santorini,South Aegean,84700,South Aegean,P-201,Bags,Bag,Leather Bag Roma,2642.85,1,0.0,1153.43
+83,O-1083,2025-07-01,2025-07-04,Standard Class,C-1048,Plácido Cabo Villalonga,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-271,Bags,Bag,Leather Bag Barcelona,3091.16,1,0.0,1527.95
+84,O-1084,2024-12-26,2024-12-29,Standard Class,C-1038,Γρηγόριος Κουρκουτάς,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-214,Shoes,Shoe,Luxury Heels Florence,822.26,1,0.0,465.55
+85,O-1085,2025-09-03,2025-09-05,Standard Class,C-1058,Aránzazu Dominga Alvarado Vázquez,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-262,Coats,Coat,Cashmere Coat Roma,5311.93,2,0.05,1645.71
+86,O-1086,2025-02-05,2025-02-06,Standard Class,C-1056,Νεκτάριος Μωραΐτης,VIP,Spain,Barcelona,Catalonia,08000,Catalonia,P-269,Watches,Watche,Luxury Watch Milan,7247.36,1,0.0,3039.85
+87,O-1087,2025-01-25,2025-01-26,Standard Class,C-1058,Patrizia Cignaroli,Corporate,Italy,Milan,Lombardy,20100,Lombardy,P-216,Shoes,Shoe,Luxury Sneakers Paris,1037.31,1,0.0,569.43
+88,O-1088,2024-11-04,2024-11-07,Standard Class,C-1027,Olivier Giraud,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-216,Shoes,Shoe,Luxury Sneakers Paris,949.31,1,0.0,316.1
+89,O-1089,2025-04-20,2025-04-21,Standard Class,C-1001,Omar Roda Seguí,Corporate,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-233,Bags,Bag,Leather Bag Milano,2288.1,1,0.0,1195.57
+90,O-1090,2025-07-04,2025-07-07,Standard Class,C-1008,Αιμίλιος Ευκαρπίδης,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-278,Coats,Coat,Cashmere Coat Roma,3283.8,1,0.05,1436.38
+91,O-1091,2025-06-22,2025-06-23,Standard Class,C-1061,Λαέρτης Γάτος,Consumer,Italy,Naples,Campania,80100,Campania,P-209,Watches,Watche,Luxury Watch Milan,7738.34,1,0.05,3733.67
+92,O-1092,2024-09-20,2024-09-21,Standard Class,C-1035,Azeneth Prada Torrijos,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-212,Jewelry,Jewelry,Diamond Earrings Nice,5968.64,1,0.0,2560.67
+93,O-1093,2025-05-08,2025-05-10,Standard Class,C-1043,Αγάθη Τσετσέρη,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-285,Coats,Coat,Wool Coat Madrid,2706.52,1,0.05,1586.23
+94,O-1094,2024-12-30,2024-12-31,Standard Class,C-1011,Griselda Fieramosca,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-275,Scarves,Scarve,Silk Scarf Venezia,567.23,1,0.0,240.08
+95,O-1095,2025-05-14,2025-05-17,Standard Class,C-1006,Encarnación Giralt Francisco,Corporate,Spain,Barcelona,Catalonia,08000,Catalonia,P-219,Jewelry,Jewelry,Gold Bracelet Monaco,8372.63,2,0.0,4639.96
+96,O-1096,2024-11-23,2024-11-26,Standard Class,C-1047,Dott. Antonella Lollobrigida,Corporate,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-277,Jewelry,Jewelry,Gold Bracelet Monaco,3329.19,1,0.0,1178.95
+97,O-1097,2025-09-14,2025-09-16,Standard Class,C-1044,Mauro Balbo,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-294,Bags,Bag,Leather Bag Milano,2618.45,1,0.0,1371.63
+98,O-1098,2025-01-20,2025-01-22,Standard Class,C-1053,Αλκμήνη Καμπούρη,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-299,Watches,Watche,Luxury Watch Milan,8391.58,1,0.0,2909.14
+99,O-1099,2025-05-10,2025-05-13,Standard Class,C-1010,Geraldo Daza Vazquez,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-253,Jewelry,Jewelry,Diamond Earrings Nice,5005.11,1,0.0,2635.11
+100,O-1100,2025-05-27,2025-05-29,Standard Class,C-1055,Sig. Camillo Ginese,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-250,Bags,Bag,Leather Bag Milano,2406.17,1,0.0,869.41
+101,O-1101,2025-03-18,2025-03-19,Standard Class,C-1097,Luís Miranda Garrido,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-222,Coats,Coat,Wool Coat Madrid,2243.08,1,0.1,1031.31
+102,O-1102,2024-12-02,2024-12-05,Standard Class,C-1071,Lorenza Filomena Valentín Haro,Consumer,Italy,Naples,Campania,80100,Campania,P-209,Bags,Bag,Leather Bag Roma,2098.57,1,0.1,990.57
+103,O-1103,2025-04-10,2025-04-12,Standard Class,C-1014,Σουμέλα Ρόκκα,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-288,Jewelry,Jewelry,Diamond Earrings Nice,4657.29,1,0.0,2007.36
+104,O-1104,2025-08-31,2025-09-01,Standard Class,C-1055,Αργυρώ Κυριακούλη,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-228,Watches,Watche,Luxury Watch Milan,6796.58,1,0.0,2194.71
+105,O-1105,2025-04-24,2025-04-27,Standard Class,C-1065,Clémence Lefèvre-Roy,VIP,Spain,Valencia,Valencia,46000,Valencia,P-230,Watches,Watche,Luxury Watch Athens,7758.07,1,0.0,2923.17
+106,O-1106,2025-08-21,2025-08-24,Standard Class,C-1019,Raffaella Zeffirelli,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-287,Jewelry,Jewelry,Diamond Earrings Nice,5133.85,1,0.05,1772.65
+107,O-1107,2025-03-25,2025-03-27,Standard Class,C-1056,Marcos Coronado Sureda,Corporate,Italy,Florence,Tuscany,50100,Tuscany,P-239,Jewelry,Jewelry,Gold Bracelet Monaco,10816.11,2,0.1,3366.86
+108,O-1108,2024-10-22,2024-10-24,Standard Class,C-1009,Dolores Accardo,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-257,Jewelry,Jewelry,Gold Bracelet Monaco,4407.68,1,0.05,2122.31
+109,O-1109,2025-05-22,2025-05-23,Standard Class,C-1057,Vittoria Magrassi,VIP,Spain,Barcelona,Catalonia,08000,Catalonia,P-205,Jewelry,Jewelry,Gold Bracelet Monaco,4235.44,1,0.1,2529.81
+110,O-1110,2025-02-15,2025-02-17,Standard Class,C-1047,Paz Aguiló Pina,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-208,Watches,Watche,Luxury Watch Milan,7888.33,1,0.0,3686.92
+111,O-1111,2024-10-02,2024-10-04,Standard Class,C-1032,Isabelle du Blot,Consumer,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-216,Shoes,Shoe,Luxury Heels Florence,581.58,1,0.05,271.99
+112,O-1112,2024-11-30,2024-12-01,Standard Class,C-1085,Sig. Lucio Muti,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-239,Bags,Bag,Leather Bag Roma,2489.39,1,0.0,1002.03
+113,O-1113,2025-09-06,2025-09-07,Standard Class,C-1028,Honoré Faure,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-284,Jewelry,Jewelry,Gold Bracelet Monaco,4548.18,1,0.0,2179.37
+114,O-1114,2024-12-16,2024-12-17,Standard Class,C-1023,Pénélope Gilbert,Corporate,Italy,Naples,Campania,80100,Campania,P-256,Shoes,Shoe,Luxury Sneakers Paris,1142.54,1,0.1,422.97
+115,O-1115,2025-02-20,2025-02-22,Standard Class,C-1100,Νικόδημος Χρυσουλής,VIP,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-259,Watches,Watche,Luxury Watch Milan,6940.31,1,0.1,3129.19
+116,O-1116,2025-03-28,2025-03-29,Standard Class,C-1025,Jean Dubois-Michaud,VIP,Italy,Naples,Campania,80100,Campania,P-291,Shoes,Shoe,Luxury Sneakers Paris,897.97,1,0.05,291.99
+117,O-1117,2024-12-31,2025-01-02,Standard Class,C-1057,Olivier Da Costa,VIP,Italy,Rome,Lazio,00100,Lazio,P-203,Coats,Coat,Wool Coat Madrid,6365.29,2,0.0,2666.65
+118,O-1118,2024-12-28,2024-12-29,Standard Class,C-1049,Luciana Cafarchia-Almagià,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-283,Bags,Bag,Leather Bag Barcelona,2032.53,1,0.0,693.66
+119,O-1119,2025-09-20,2025-09-22,Standard Class,C-1089,Marcelle Valette,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-210,Jewelry,Jewelry,Gold Bracelet Monaco,5143.55,1,0.05,1875.83
+120,O-1120,2025-01-10,2025-01-13,Standard Class,C-1093,Αγάθη Μανοπούλου,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-206,Shoes,Shoe,Luxury Sneakers Paris,911.51,1,0.1,448.18
+121,O-1121,2025-05-13,2025-05-14,Standard Class,C-1014,Ιωάννης Καζανόπουλος,Corporate,Italy,Rome,Lazio,00100,Lazio,P-237,Watches,Watche,Luxury Watch Athens,18373.1,2,0.0,8900.72
+122,O-1122,2025-03-07,2025-03-10,Standard Class,C-1053,Emmanuelle Barbier,Corporate,Italy,Florence,Tuscany,50100,Tuscany,P-269,Bags,Bag,Leather Bag Barcelona,1922.62,1,0.1,1080.51
+123,O-1123,2025-08-28,2025-08-31,Standard Class,C-1049,Bernarda Adelina Reguera Blanca,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-230,Bags,Bag,Leather Bag Roma,2908.06,1,0.05,988.81
+124,O-1124,2024-11-13,2024-11-16,Standard Class,C-1043,Roger Martins,VIP,Greece,Mykonos,South Aegean,84600,South Aegean,P-217,Watches,Watche,Luxury Watch Athens,5307.5,1,0.1,1651.14
+125,O-1125,2024-10-24,2024-10-25,Standard Class,C-1025,Teresa Tremonti-Zanazzo,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-232,Jewelry,Jewelry,Diamond Earrings Nice,5586.86,1,0.0,2155.6
+126,O-1126,2025-08-16,2025-08-19,Standard Class,C-1042,Íngrid del Cid,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-249,Coats,Coat,Wool Coat Madrid,4295.23,1,0.0,1927.96
+127,O-1127,2024-11-11,2024-11-13,Standard Class,C-1066,Paola Valdés Pou,VIP,Greece,Athens,Attica,10500,Attica,P-269,Coats,Coat,Cashmere Coat Roma,2569.5,1,0.05,849.94
+128,O-1128,2025-06-06,2025-06-09,Standard Class,C-1037,Lara Cañete Catalán,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-244,Watches,Watche,Luxury Watch Milan,14301.11,2,0.0,7408.61
+129,O-1129,2025-04-27,2025-04-30,Standard Class,C-1055,Bienvenida Hoz Bayona,Corporate,Italy,Milan,Lombardy,20100,Lombardy,P-246,Watches,Watche,Luxury Watch Milan,8149.48,1,0.0,2793.92
+130,O-1130,2025-09-12,2025-09-13,Standard Class,C-1016,Sandro Legnante-Turchi,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-277,Coats,Coat,Cashmere Coat Roma,2653.44,1,0.1,1551.33
+131,O-1131,2025-03-28,2025-03-30,Standard Class,C-1097,Edoardo Pascarella,Corporate,Spain,Seville,Andalusia,41000,Andalusia,P-231,Shoes,Shoe,Luxury Heels Florence,667.4,1,0.0,347.52
+132,O-1132,2025-04-15,2025-04-18,Standard Class,C-1049,Sig. Guglielmo Bernardi,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-288,Scarves,Scarve,Silk Scarf Athens,1213.71,2,0.0,408.77
+133,O-1133,2025-06-18,2025-06-20,Standard Class,C-1022,Αθηνά-Κανέλλα Κατσιμάνη,VIP,Spain,Valencia,Valencia,46000,Valencia,P-270,Watches,Watche,Luxury Watch Athens,6086.22,1,0.05,3380.34
+134,O-1134,2025-07-23,2025-07-25,Standard Class,C-1065,Dominique Durand,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-203,Scarves,Scarve,Silk Scarf Athens,614.99,1,0.05,270.73
+135,O-1135,2025-08-25,2025-08-28,Standard Class,C-1011,Ugo Satta,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-216,Coats,Coat,Cashmere Coat Roma,2740.29,1,0.0,1192.01
+136,O-1136,2025-01-08,2025-01-09,Standard Class,C-1099,Manon Hervé-Normand,Corporate,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-215,Jewelry,Jewelry,Gold Bracelet Monaco,5452.95,1,0.05,1905.25
+137,O-1137,2024-10-05,2024-10-08,Standard Class,C-1028,Juan Luis Grande Paz,VIP,Spain,Barcelona,Catalonia,08000,Catalonia,P-281,Shoes,Shoe,Luxury Sneakers Paris,782.51,1,0.0,381.48
+138,O-1138,2025-08-26,2025-08-29,Standard Class,C-1082,Zoé Lévêque,Corporate,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-272,Watches,Watche,Luxury Watch Milan,7516.91,1,0.0,2438.24
+139,O-1139,2024-11-17,2024-11-20,Standard Class,C-1026,Στεφανία Κοκκινίδου,Corporate,Italy,Naples,Campania,80100,Campania,P-282,Watches,Watche,Luxury Watch Milan,8298.25,1,0.1,3099.09
+140,O-1140,2024-12-20,2024-12-22,Standard Class,C-1058,Jolanda Piane,Corporate,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-259,Coats,Coat,Wool Coat Madrid,2455.34,1,0.05,1183.47
+141,O-1141,2025-01-05,2025-01-08,Standard Class,C-1040,Dionisio Ernesto Suarez Nuñez,VIP,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-240,Jewelry,Jewelry,Gold Bracelet Monaco,4213.77,1,0.1,1419.01
+142,O-1142,2025-02-18,2025-02-19,Standard Class,C-1018,Gian Galuppi,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-241,Scarves,Scarve,Silk Scarf Venezia,730.71,1,0.0,386.5
+143,O-1143,2025-09-17,2025-09-20,Standard Class,C-1059,Ζαφείρης Γρηγορόπουλος,VIP,Greece,Athens,Attica,10500,Attica,P-264,Bags,Bag,Leather Bag Roma,3714.01,2,0.0,1353.92
+144,O-1144,2025-02-20,2025-02-21,Standard Class,C-1006,María Carmen Ribas Soler,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-213,Jewelry,Jewelry,Gold Bracelet Monaco,9295.41,2,0.0,5249.46
+145,O-1145,2025-08-19,2025-08-21,Standard Class,C-1046,Fabio Foscari,Consumer,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-209,Jewelry,Jewelry,Diamond Earrings Nice,9467.79,2,0.1,5011.5
+146,O-1146,2025-07-14,2025-07-17,Standard Class,C-1087,Baldassare Marrone,Consumer,Italy,Naples,Campania,80100,Campania,P-271,Shoes,Shoe,Luxury Heels Florence,1017.27,1,0.0,365.93
+147,O-1147,2025-07-18,2025-07-21,Standard Class,C-1005,Amanda Iannelli,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-219,Jewelry,Jewelry,Diamond Earrings Nice,3574.9,1,0.05,2071.34
+148,O-1148,2024-10-04,2024-10-05,Standard Class,C-1050,Palmira Gálvez Rosa,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-247,Coats,Coat,Cashmere Coat Roma,2539.77,1,0.0,1508.55
+149,O-1149,2024-12-29,2025-01-01,Standard Class,C-1088,Pina Polani,Corporate,Spain,Madrid,Madrid,28000,Madrid,P-274,Watches,Watche,Luxury Watch Athens,17565.82,2,0.0,8032.32
+150,O-1150,2025-06-12,2025-06-13,Standard Class,C-1087,Louis Michaud,Consumer,Italy,Rome,Lazio,00100,Lazio,P-240,Bags,Bag,Leather Bag Roma,5237.59,2,0.0,2220.15
+151,O-1151,2025-04-08,2025-04-10,Standard Class,C-1064,Σάββας-Αγαπητός Ότσος,VIP,Italy,Rome,Lazio,00100,Lazio,P-271,Jewelry,Jewelry,Gold Bracelet Monaco,4230.35,1,0.1,1935.99
+152,O-1152,2024-09-30,2024-10-01,Standard Class,C-1058,Armida Lupe Báez Barroso,Corporate,Spain,Seville,Andalusia,41000,Andalusia,P-235,Scarves,Scarve,Silk Scarf Venezia,634.64,1,0.0,369.64
+153,O-1153,2025-09-13,2025-09-15,Standard Class,C-1090,Margaux Gilbert,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-271,Coats,Coat,Wool Coat Madrid,2716.99,1,0.05,914.44
+154,O-1154,2025-01-30,2025-02-01,Standard Class,C-1044,Christiane-Véronique Blanchard,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-283,Shoes,Shoe,Luxury Heels Florence,841.35,1,0.1,306.42
+155,O-1155,2025-06-18,2025-06-21,Standard Class,C-1089,Sandalio Cobos Frías,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-267,Bags,Bag,Leather Bag Barcelona,2617.23,1,0.0,826.38
+156,O-1156,2025-06-28,2025-06-30,Standard Class,C-1091,Κικιλία-Αγάθη Σπυριδάκη,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-252,Jewelry,Jewelry,Gold Bracelet Monaco,7071.33,2,0.1,3501.45
+157,O-1157,2025-03-22,2025-03-24,Standard Class,C-1036,Sig. Fedele Bragaglia,VIP,Italy,Rome,Lazio,00100,Lazio,P-222,Jewelry,Jewelry,Gold Bracelet Monaco,11985.24,2,0.0,6953.56
+158,O-1158,2024-09-22,2024-09-24,Standard Class,C-1100,Ευστράτιος Ρέππος,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-272,Bags,Bag,Leather Bag Roma,2555.06,1,0.05,984.64
+159,O-1159,2025-08-02,2025-08-03,Standard Class,C-1064,Βλάσης Ζώτος,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-282,Scarves,Scarve,Silk Scarf Athens,480.87,1,0.0,146.29
+160,O-1160,2024-10-14,2024-10-16,Standard Class,C-1072,Arthur Guilbert,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-211,Jewelry,Jewelry,Diamond Earrings Nice,11313.11,2,0.0,4021.07
+161,O-1161,2024-10-05,2024-10-07,Standard Class,C-1041,Antoinette Legendre,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-242,Coats,Coat,Wool Coat Madrid,2712.66,1,0.0,1026.65
+162,O-1162,2025-08-27,2025-08-30,Standard Class,C-1030,Giustino Muratori,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-287,Scarves,Scarve,Silk Scarf Athens,678.71,1,0.0,333.66
+163,O-1163,2025-08-12,2025-08-14,Standard Class,C-1078,Auguste de Charpentier,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-295,Scarves,Scarve,Silk Scarf Athens,644.27,1,0.1,328.95
+164,O-1164,2024-12-22,2024-12-25,Standard Class,C-1085,Gilles Dumas Le Nguyen,Corporate,Italy,Naples,Campania,80100,Campania,P-209,Jewelry,Jewelry,Diamond Earrings Nice,4179.32,1,0.0,2292.91
+165,O-1165,2025-09-07,2025-09-10,Standard Class,C-1068,Stéphanie-Manon Colin,Consumer,Greece,Athens,Attica,10500,Attica,P-291,Watches,Watche,Luxury Watch Athens,18890.13,2,0.0,10761.08
+166,O-1166,2024-10-24,2024-10-25,Standard Class,C-1058,Théodore Le Pereira,Corporate,Greece,Athens,Attica,10500,Attica,P-286,Jewelry,Jewelry,Diamond Earrings Nice,5412.78,1,0.0,2266.79
+167,O-1167,2025-07-13,2025-07-16,Standard Class,C-1027,Nicolò Emo,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-208,Jewelry,Jewelry,Gold Bracelet Monaco,10315.3,2,0.0,3983.02
+168,O-1168,2025-09-06,2025-09-07,Standard Class,C-1098,Κοραλία-Πουλχερία Ξηρίδου,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-210,Coats,Coat,Wool Coat Madrid,3940.98,1,0.05,1322.55
+169,O-1169,2025-03-02,2025-03-05,Standard Class,C-1016,Adrienne Valentin Le Olivier,VIP,Italy,Florence,Tuscany,50100,Tuscany,P-268,Coats,Coat,Wool Coat Madrid,6154.61,2,0.0,2303.39
+170,O-1170,2025-07-09,2025-07-10,Standard Class,C-1035,Margot-Dorothée Bailly,VIP,Italy,Milan,Lombardy,20100,Lombardy,P-278,Watches,Watche,Luxury Watch Milan,6869.4,1,0.0,2485.52
+171,O-1171,2025-08-15,2025-08-18,Standard Class,C-1004,Συμεώνη Μπαλάση,Corporate,Italy,Rome,Lazio,00100,Lazio,P-251,Watches,Watche,Luxury Watch Athens,13331.46,2,0.0,6158.17
+172,O-1172,2025-01-06,2025-01-07,Standard Class,C-1064,Vanesa Elorza,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-218,Scarves,Scarve,Silk Scarf Athens,466.58,1,0.1,182.04
+173,O-1173,2024-12-14,2024-12-17,Standard Class,C-1075,Suzanne Le Ribeiro,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-282,Bags,Bag,Leather Bag Roma,4691.4,2,0.05,2387.42
+174,O-1174,2025-08-18,2025-08-19,Standard Class,C-1038,Ευλαμπία Βραδή,Consumer,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-290,Scarves,Scarve,Silk Scarf Athens,570.7,1,0.1,327.82
+175,O-1175,2024-09-22,2024-09-24,Standard Class,C-1071,Alice Roux-Delorme,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-257,Shoes,Shoe,Luxury Sneakers Paris,941.5,1,0.0,433.74
+176,O-1176,2024-12-28,2024-12-29,Standard Class,C-1034,Φραντζέσκα Δάφνη,Corporate,Italy,Milan,Lombardy,20100,Lombardy,P-261,Scarves,Scarve,Silk Scarf Venezia,648.58,1,0.05,253.57
+177,O-1177,2025-07-20,2025-07-21,Standard Class,C-1024,Alderano Ajello-Treves,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-250,Watches,Watche,Luxury Watch Athens,7618.53,1,0.05,4058.04
+178,O-1178,2024-11-05,2024-11-07,Standard Class,C-1068,Tamara Nadal Mir,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-292,Coats,Coat,Cashmere Coat Roma,7460.86,2,0.05,4284.77
+179,O-1179,2025-05-22,2025-05-24,Standard Class,C-1052,Ansaldo Pigafetta,Corporate,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-270,Bags,Bag,Leather Bag Roma,4548.86,2,0.05,1572.65
+180,O-1180,2025-04-29,2025-04-30,Standard Class,C-1048,Lucie Klein,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-258,Coats,Coat,Wool Coat Madrid,4332.08,1,0.05,1519.61
+181,O-1181,2025-08-17,2025-08-18,Standard Class,C-1069,Tatiana Gualandi,Corporate,Italy,Milan,Lombardy,20100,Lombardy,P-217,Bags,Bag,Leather Bag Roma,2750.27,1,0.0,1408.55
+182,O-1182,2024-09-25,2024-09-26,Standard Class,C-1064,Βαλεντίνος-Αύγουστος Κουράκος,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-268,Bags,Bag,Leather Bag Milano,4314.27,2,0.0,1315.93
+183,O-1183,2024-10-20,2024-10-23,Standard Class,C-1036,Annamaria Zola,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-267,Bags,Bag,Leather Bag Milano,2071.64,1,0.0,740.78
+184,O-1184,2025-09-19,2025-09-21,Standard Class,C-1034,Όθων Χατζιάρας,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-289,Jewelry,Jewelry,Gold Bracelet Monaco,4641.68,1,0.05,2345.03
+185,O-1185,2025-04-28,2025-05-01,Standard Class,C-1083,Enzio Morgagni,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-207,Jewelry,Jewelry,Diamond Earrings Nice,4776.54,1,0.0,1551.45
+186,O-1186,2025-08-29,2025-09-01,Standard Class,C-1100,José de Sanmiguel,Corporate,Italy,Milan,Lombardy,20100,Lombardy,P-288,Scarves,Scarve,Silk Scarf Venezia,1275.66,2,0.05,400.52
+187,O-1187,2025-09-13,2025-09-16,Standard Class,C-1035,Sig.ra Paola Parpinel,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-296,Scarves,Scarve,Silk Scarf Venezia,1294.65,2,0.0,504.63
+188,O-1188,2025-07-27,2025-07-30,Standard Class,C-1049,Margarita Calvet Balaguer,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-206,Jewelry,Jewelry,Diamond Earrings Nice,4434.45,1,0.1,1639.16
+189,O-1189,2025-08-08,2025-08-10,Standard Class,C-1077,Ιοκάστη Ασσαργιωτάκη,VIP,Spain,Barcelona,Catalonia,08000,Catalonia,P-300,Watches,Watche,Luxury Watch Milan,12113.66,2,0.1,4463.18
+190,O-1190,2025-01-01,2025-01-03,Standard Class,C-1023,Σεραφεία-Ιορδανία Δουλουφάκη,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-210,Watches,Watche,Luxury Watch Athens,5727.73,1,0.0,2371.28
+191,O-1191,2024-11-01,2024-11-04,Standard Class,C-1049,Vera Baró Llabrés,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-246,Shoes,Shoe,Luxury Heels Florence,833.02,1,0.0,283.02
+192,O-1192,2025-09-07,2025-09-09,Standard Class,C-1057,Ευσεβία Παπατζήκα,Consumer,Italy,Florence,Tuscany,50100,Tuscany,P-276,Jewelry,Jewelry,Gold Bracelet Monaco,4666.61,1,0.1,1417.26
+193,O-1193,2025-05-23,2025-05-25,Standard Class,C-1099,Margherita Crespi,Corporate,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-221,Watches,Watche,Luxury Watch Milan,7905.08,1,0.05,3085.66
+194,O-1194,2025-08-06,2025-08-07,Standard Class,C-1008,Louis Roussel,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-246,Coats,Coat,Cashmere Coat Roma,2577.13,1,0.0,1330.49
+195,O-1195,2025-03-15,2025-03-18,Standard Class,C-1078,William Weiss,Consumer,France,Marseille,Provence-Alpes-Côte d'Azur,13000,Provence-Alpes-Côte d'Azur,P-242,Bags,Bag,Leather Bag Roma,4881.62,2,0.05,2109.19
+196,O-1196,2025-08-24,2025-08-27,Standard Class,C-1076,Gilbert Voisin,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-250,Shoes,Shoe,Luxury Sneakers Paris,909.91,1,0.05,473.57
+197,O-1197,2024-10-10,2024-10-13,Standard Class,C-1100,Gabrielle Sanchez,Consumer,Spain,Seville,Andalusia,41000,Andalusia,P-272,Shoes,Shoe,Luxury Sneakers Paris,767.42,1,0.0,387.17
+198,O-1198,2024-12-21,2024-12-24,Standard Class,C-1059,Thierry Couturier,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-217,Coats,Coat,Wool Coat Madrid,3276.86,1,0.0,1231.46
+199,O-1199,2025-04-15,2025-04-18,Standard Class,C-1054,Ακριβή Ρέππα,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-269,Jewelry,Jewelry,Diamond Earrings Nice,4805.3,1,0.05,2453.06
+200,O-1200,2025-09-06,2025-09-07,Standard Class,C-1098,Lorraine Gimenez,Corporate,Spain,Madrid,Madrid,28000,Madrid,P-272,Watches,Watche,Luxury Watch Athens,11942.53,2,0.05,7042.69
+201,O-1201,2025-05-19,2025-05-20,Standard Class,C-1001,Dolores Cavalcanti,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-259,Shoes,Shoe,Luxury Heels Florence,905.98,1,0.05,542.96
+202,O-1202,2025-02-24,2025-02-25,Standard Class,C-1037,Ιωνάς Σαρίκας,VIP,Italy,Milan,Lombardy,20100,Lombardy,P-244,Watches,Watche,Luxury Watch Athens,8399.12,1,0.05,3667.05
+203,O-1203,2025-05-19,2025-05-22,Standard Class,C-1061,Natividad Balaguer,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-238,Shoes,Shoe,Luxury Sneakers Paris,1062.46,1,0.0,325.94
+204,O-1204,2025-04-18,2025-04-21,Standard Class,C-1013,Aimée Arnaud,VIP,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-242,Jewelry,Jewelry,Gold Bracelet Monaco,9617.47,2,0.1,3554.2
+205,O-1205,2025-07-22,2025-07-25,Standard Class,C-1023,Patrick de Pasquier,Corporate,Greece,Mykonos,South Aegean,84600,South Aegean,P-278,Bags,Bag,Leather Bag Barcelona,1754.04,1,0.1,837.84
+206,O-1206,2025-06-21,2025-06-22,Standard Class,C-1090,Henri Parent-Vallet,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-246,Jewelry,Jewelry,Gold Bracelet Monaco,3749.74,1,0.0,1639.63
+207,O-1207,2025-07-10,2025-07-13,Standard Class,C-1062,África Dalmau,Corporate,Greece,Athens,Attica,10500,Attica,P-258,Shoes,Shoe,Luxury Heels Florence,928.39,1,0.05,534.39
+208,O-1208,2024-09-29,2024-10-02,Standard Class,C-1017,Urbano Castellanos Arrieta,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-288,Scarves,Scarve,Silk Scarf Athens,586.24,1,0.1,249.43
+209,O-1209,2025-05-28,2025-05-31,Standard Class,C-1049,Ευτυχία Πεμούση,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-217,Coats,Coat,Wool Coat Madrid,3284.65,1,0.05,1815.08
+210,O-1210,2025-01-01,2025-01-03,Standard Class,C-1001,Παντελία Δουλουφάκη,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-253,Coats,Coat,Wool Coat Madrid,9227.46,2,0.1,3231.24
+211,O-1211,2024-10-12,2024-10-13,Standard Class,C-1037,Lara Filzi,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-270,Coats,Coat,Wool Coat Madrid,3485.45,1,0.0,1325.75
+212,O-1212,2024-12-29,2025-01-01,Standard Class,C-1096,Veronica Passalacqua,Corporate,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-294,Coats,Coat,Cashmere Coat Roma,3579.39,1,0.05,2013.2
+213,O-1213,2025-03-02,2025-03-04,Standard Class,C-1033,Calista Bou,VIP,Italy,Naples,Campania,80100,Campania,P-226,Bags,Bag,Leather Bag Milano,2593.44,1,0.1,907.17
+214,O-1214,2025-06-14,2025-06-15,Standard Class,C-1026,Sig.ra Jolanda Borrani,Corporate,Spain,Madrid,Madrid,28000,Madrid,P-237,Shoes,Shoe,Luxury Heels Florence,997.71,1,0.0,339.9
+215,O-1215,2025-06-05,2025-06-06,Standard Class,C-1035,Élisabeth Neveu,Corporate,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-231,Scarves,Scarve,Silk Scarf Athens,1023.25,2,0.1,350.62
+216,O-1216,2024-11-03,2024-11-06,Standard Class,C-1053,Ηρόδοτος Μελιτσόπουλος,Consumer,Italy,Naples,Campania,80100,Campania,P-288,Jewelry,Jewelry,Diamond Earrings Nice,5183.07,1,0.1,3032.49
+217,O-1217,2024-11-04,2024-11-07,Standard Class,C-1000,Sig. Nanni Chiaramonte,Corporate,Greece,Santorini,South Aegean,84700,South Aegean,P-250,Bags,Bag,Leather Bag Barcelona,1971.78,1,0.1,1079.46
+218,O-1218,2025-04-13,2025-04-15,Standard Class,C-1041,Ester Serrano-Santiago,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-205,Shoes,Shoe,Luxury Sneakers Paris,778.03,1,0.1,237.21
+219,O-1219,2025-02-12,2025-02-14,Standard Class,C-1058,Maria Accardo,VIP,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-283,Watches,Watche,Luxury Watch Athens,7271.95,1,0.0,4089.21
+220,O-1220,2025-06-19,2025-06-20,Standard Class,C-1083,Fidel Arce Jurado,Consumer,Spain,Madrid,Madrid,28000,Madrid,P-280,Bags,Bag,Leather Bag Roma,2532.75,1,0.0,1085.97
+221,O-1221,2025-07-01,2025-07-04,Standard Class,C-1012,Priscilla Cassarà,Consumer,Italy,Rome,Lazio,00100,Lazio,P-266,Jewelry,Jewelry,Gold Bracelet Monaco,12703.45,2,0.0,3841.76
+222,O-1222,2025-03-27,2025-03-28,Standard Class,C-1054,Michelle Bourdon-Philippe,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-213,Bags,Bag,Leather Bag Barcelona,1665.44,1,0.05,683.28
+223,O-1223,2025-08-14,2025-08-15,Standard Class,C-1048,Roger Martel,Corporate,France,Paris,Île-de-France,75000,Île-de-France,P-278,Jewelry,Jewelry,Gold Bracelet Monaco,4544.11,1,0.1,1841.98
+224,O-1224,2024-10-24,2024-10-27,Standard Class,C-1095,Geneviève Lagarde-De Oliveira,VIP,Greece,Thessaloniki,Central Macedonia,54600,Central Macedonia,P-217,Bags,Bag,Leather Bag Milano,1669.42,1,0.1,676.88
+225,O-1225,2024-12-07,2024-12-09,Standard Class,C-1017,Sébastien Lemaître,Consumer,Italy,Rome,Lazio,00100,Lazio,P-299,Jewelry,Jewelry,Diamond Earrings Nice,4301.66,1,0.05,1555.63
+226,O-1226,2024-09-30,2024-10-03,Standard Class,C-1050,Trini Menendez,Corporate,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-230,Coats,Coat,Cashmere Coat Roma,7488.95,2,0.0,3433.58
+227,O-1227,2025-05-03,2025-05-05,Standard Class,C-1040,Corinne Rémy,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-297,Jewelry,Jewelry,Gold Bracelet Monaco,9102.85,2,0.0,2776.43
+228,O-1228,2024-12-03,2024-12-04,Standard Class,C-1033,Daniel Colin,Consumer,Italy,Naples,Campania,80100,Campania,P-280,Jewelry,Jewelry,Diamond Earrings Nice,7060.06,2,0.1,3604.47
+229,O-1229,2024-10-30,2024-11-02,Standard Class,C-1068,Emmanuelle Benard,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-219,Jewelry,Jewelry,Gold Bracelet Monaco,3534.98,1,0.1,1682.41
+230,O-1230,2025-01-30,2025-02-01,Standard Class,C-1089,Θεοδώρα Ξενάκη,Corporate,France,Paris,Île-de-France,75000,Île-de-France,P-255,Scarves,Scarve,Silk Scarf Venezia,601.16,1,0.1,290.77
+231,O-1231,2025-01-10,2025-01-12,Standard Class,C-1085,Henriette Renard,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-244,Scarves,Scarve,Silk Scarf Athens,526.96,1,0.0,216.88
+232,O-1232,2025-05-18,2025-05-21,Standard Class,C-1015,Dott. Tiziana Desio,Consumer,Greece,Santorini,South Aegean,84700,South Aegean,P-233,Jewelry,Jewelry,Gold Bracelet Monaco,4205.85,1,0.1,1836.1
+233,O-1233,2025-08-09,2025-08-10,Standard Class,C-1063,Élise Langlois,Consumer,Spain,Barcelona,Catalonia,08000,Catalonia,P-229,Jewelry,Jewelry,Gold Bracelet Monaco,4536.46,1,0.0,2529.56
+234,O-1234,2025-03-29,2025-03-30,Standard Class,C-1005,Ασημής Μαυροειδάκος,Consumer,France,Nice,Provence-Alpes-Côte d'Azur,06000,Provence-Alpes-Côte d'Azur,P-291,Bags,Bag,Leather Bag Barcelona,4478.72,2,0.0,1775.99
+235,O-1235,2025-06-16,2025-06-19,Standard Class,C-1040,Adora Ríos-Aramburu,VIP,Spain,Barcelona,Catalonia,08000,Catalonia,P-222,Jewelry,Jewelry,Gold Bracelet Monaco,6215.16,1,0.0,3643.47
+236,O-1236,2025-04-16,2025-04-18,Standard Class,C-1036,Josep Fernandez Gámez,Consumer,Greece,Athens,Attica,10500,Attica,P-237,Shoes,Shoe,Luxury Sneakers Paris,995.09,1,0.0,437.02
+237,O-1237,2025-04-25,2025-04-26,Standard Class,C-1093,Nicolas-Yves Legrand,Consumer,Greece,Athens,Attica,10500,Attica,P-281,Scarves,Scarve,Silk Scarf Athens,377.61,1,0.05,113.45
+238,O-1238,2025-01-07,2025-01-10,Standard Class,C-1093,Julián Machado Parra,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-218,Coats,Coat,Cashmere Coat Roma,3293.23,1,0.0,1031.34
+239,O-1239,2025-08-07,2025-08-10,Standard Class,C-1052,Alejandro Pinedo Barriga,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-281,Jewelry,Jewelry,Gold Bracelet Monaco,7941.14,2,0.0,3792.44
+240,O-1240,2025-01-02,2025-01-04,Standard Class,C-1084,Augustin Grégoire,Consumer,Spain,Valencia,Valencia,46000,Valencia,P-240,Coats,Coat,Wool Coat Madrid,6889.81,2,0.05,2549.8
+241,O-1241,2025-02-12,2025-02-13,Standard Class,C-1099,Sig. Gianmarco Donatoni,Consumer,France,Monaco,Monte-Carlo,98000,Monte-Carlo,P-252,Coats,Coat,Wool Coat Madrid,2663.55,1,0.05,1569.87
+242,O-1242,2025-03-09,2025-03-11,Standard Class,C-1039,Βάγια-Χρυσοβαλάντω Αρχάκη,Consumer,Italy,Milan,Lombardy,20100,Lombardy,P-290,Scarves,Scarve,Silk Scarf Athens,588.53,1,0.0,324.15
+243,O-1243,2025-05-03,2025-05-04,Standard Class,C-1011,Bernard Blot,VIP,Greece,Athens,Attica,10500,Attica,P-233,Watches,Watche,Luxury Watch Milan,8757.48,1,0.0,5128.63
+244,O-1244,2025-03-23,2025-03-26,Standard Class,C-1095,Suzanne Masson,Consumer,Italy,Rome,Lazio,00100,Lazio,P-207,Bags,Bag,Leather Bag Milano,2846.3,1,0.0,1023.07
+245,O-1245,2024-10-28,2024-10-30,Standard Class,C-1087,Lisa Farina,Corporate,Spain,Barcelona,Catalonia,08000,Catalonia,P-225,Bags,Bag,Leather Bag Milano,4039.76,2,0.0,1323.4
+246,O-1246,2024-11-10,2024-11-11,Standard Class,C-1005,Διομήδης-Εφραίμ Παλλάς,Consumer,Greece,Mykonos,South Aegean,84600,South Aegean,P-248,Coats,Coat,Cashmere Coat Roma,6065.5,2,0.0,2463.7
+247,O-1247,2024-12-07,2024-12-09,Standard Class,C-1035,Κλημεντίνη Χρονοπούλου,VIP,Italy,Rome,Lazio,00100,Lazio,P-263,Watches,Watche,Luxury Watch Milan,13117.65,2,0.1,4175.27
+248,O-1248,2024-09-24,2024-09-26,Standard Class,C-1017,Αρτέμιος-Χρίστος Μάργαρης,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-261,Coats,Coat,Wool Coat Madrid,5459.34,2,0.05,3132.59
+249,O-1249,2025-03-30,2025-04-01,Standard Class,C-1034,Zacharie Jacob,Consumer,France,Paris,Île-de-France,75000,Île-de-France,P-260,Shoes,Shoe,Luxury Sneakers Paris,1164.82,1,0.0,689.8
+250,O-1250,2024-11-07,2024-11-08,Standard Class,C-1084,Émile Leduc,Consumer,Italy,Rome,Lazio,00100,Lazio,P-245,Jewelry,Jewelry,Diamond Earrings Nice,5404.98,1,0.0,2005.06

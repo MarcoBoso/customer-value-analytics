@@ -1,0 +1,584 @@
+---
+title: "Sales_Analysis_Spain"
+author: "Marco Boso"
+date: "2025-09-20"
+output: html_document
+---
+
+For a company that plans to grow, it **is essential to know which customers truly drive the business**. Not all customers add the same revenue. Some buy often and spend a lot. Others make a few large purchases. Many buy once and do not return. This report explains a simple path from data to action. First we use **RFM analysis** to group customers by how recent and how often they buy and by how much they spend. This shows recent high spenders, loyal repeat buyers, and dormant accounts. Then we run a **Pareto analysis** to see how a small group creates most sales. That helps direct effort where it matters. Next we build a **cohort** view to see how each starting group comes back over time. This makes the step from first to second purchase clear and shows long term retention. Last we add **churn prediction** to flag who may leave so we can act early with the right message and service. Together these steps turn raw transactions into clear actions that strengthen retention, speed up the second purchase, raise basket value, and bring back customers at risk, supporting sustainable growth across the entire customer base.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+
+library(tidyverse)
+library(lubridate)
+library(skimr)
+library(DataExplorer)
+library(scales)
+library(forcats)
+library(patchwork)
+library(ggrepel)
+library(zoo)
+library(glue)
+library(dplyr)
+library(forcats)
+library(ggplot2)
+library(scales)
+library(plotly)
+library(ggplot2)
+library(tsibble)
+library(fable)
+library(feasts)
+library(randomForest)
+library(janitor)
+library(dplyr)
+library(htmlwidgets)
+library(htmltools)
+library(ggplot2)  
+library(scales)
+
+
+csv_path <- "Pedidos.csv"
+
+df <- read_csv(csv_path, locale = locale(encoding = "UTF-8")) %>%
+  clean_names() 
+
+required_cols <- c("id_cliente", "nombre_del_cliente")
+missing_cols  <- setdiff(required_cols, names(df))
+if (length(missing_cols)) {
+  stop("Missing columns in data: ", paste(missing_cols, collapse = ", "),
+       "\nAvailable columns are:\n", paste(names(df), collapse = ", "))
+}
+```
+
+## RFM Analysis
+
+The RFM model is a powerful framework that can help us to separate these groups of clients and understand better the customer value. By scoring clients on how recently they purchased, how often they buy, and how much revenue they generate, we can build a clear picture of the customer base.
+
+This matters for expansion because:
+
+-   It highlights the most loyal and profitable customers ("*Champions*") who should be nurtured and replicated in new markets.
+
+-   It identifies at-risk segments (previously valuable customers who have stopped buying) showing where reactivation strategies are needed to avoid revenue leakage.
+
+-   It uncovers untapped potential, such as new buyers or occasional big spenders who could be converted into regular clients with the right incentives.
+
+chose RFM analysis because it transforms raw data into strategic insights, helping to determine which customers to invest in, which ones to win back, and how to shape targeted actions that drive both short-term revenue growth and long-term expansion.
+
+### Scoring Customers
+
+Using transaction history, each client was assigned scores from 1 to 5 for recency, frequency, and monetary contribution.
+
+-   Customers with R=5 purchased very recently, while R=1 indicates long inactivity.
+
+-   F=5 means very frequent buyers, F=1 means rare purchases.
+
+-   M=5 corresponds to high-spenders, while M=1 are low-spenders.
+
+Combining these scores produces a 3-digit RFM profile (for example a profile that has R=5, F=4, M=5 will be labeled as “*Champions*”).
+
+```{r}
+snapshot_date <- max(df$fecha_de_pedido, na.rm = TRUE) + 1
+
+rfm_base <- df |> 
+  group_by(id_cliente, nombre_del_cliente) |> 
+  summarise(
+    ultima_compra = max(fecha_de_pedido, na.rm = TRUE),
+    recency_days  = as.integer(max(fecha_de_pedido, na.rm = TRUE) - ultima_compra),
+    frequency     = n_distinct(id_pedido),
+    monetary      = sum(ventas, na.rm = TRUE),
+    .groups = "drop"
+  ) |> 
+  mutate(
+    recency_days = as.integer(snapshot_date - ultima_compra)  
+  )
+```
+
+```{r}
+rfm_scored <- rfm_base |> 
+  mutate(
+    R_score = 6 - ntile(recency_days, 5),
+    F_score = ntile(frequency, 5),
+    M_score = ntile(monetary, 5),
+    RFM     = paste0(R_score, F_score, M_score),
+    RFM_sum = R_score + F_score + M_score
+  )
+```
+
+```{r}
+rfm_segmented <- rfm_scored |>
+  mutate(
+    segment = case_when(
+      R_score >= 4 & F_score >= 4 & M_score >= 4 ~ "Champions",
+      (R_score >= 4 & F_score >= 3) | (R_score >= 3 & F_score >= 4) ~ "Loyal",
+      R_score >= 3 & F_score >= 2 & M_score >= 2 ~ "Potential Loyalist",
+      R_score >= 3 & F_score <= 3                ~ "Recent",
+      R_score <= 2 & F_score >= 3                ~ "At Risk (High F)",
+      R_score <= 2 & M_score >= 4                ~ "Big Spenders at Risk",
+      R_score <= 2 & F_score <= 2                ~ "Hibernating",
+      TRUE ~ NA_character_
+    )
+  )
+
+```
+
+```{r}
+seg_levels <- c("Champions", "Loyal", "Potential Loyalist",
+                "Recent", "At Risk (High F)", "Big Spenders at Risk", "Hibernating")
+
+seg_colors <- c(
+  "Champions"            = "#1B5E20",  
+  "Loyal"                = "#2E7D32",
+  "Potential Loyalist"   = "#66BB6A",
+  "Recent"               = "#FBC02D",  
+  "At Risk (High F)"     = "#F57F17",
+  "Big Spenders at Risk" = "#E65100",
+  "Hibernating"          = "#C62828"   
+)
+
+seg_plot <- rfm_segmented |>
+  count(segment, name = "customers") |>
+  mutate(
+    share        = customers / sum(customers),
+    pct_label    = percent(share, accuracy = 0.1),          
+    segment_fill = factor(segment, levels = seg_levels),
+    segment_bar  = fct_reorder(segment, customers, .desc = FALSE),
+    .tt = paste0("<b>", segment, "</b><br>",
+             "Customers: ", comma(customers), "<br>",
+             "Share: ", pct_label))
+
+p <- ggplot(seg_plot, aes(x = segment_bar, y = customers,
+                          fill = segment_fill, text = .tt)) +
+  geom_col(alpha = 0.95, width = 0.8, color = NA) +
+  geom_text(aes(label = pct_label), vjust = -0.12, size = 3.7) + 
+  scale_fill_manual(name = "RFM Segment", values = seg_colors, breaks = seg_levels) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.10))) +
+  coord_flip() +
+  labs(
+    title = "Distribution by RFM Segment",
+    subtitle = "Sorted by number of customers",
+    x = "Segment",
+    y = "Number of customers"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"),
+        legend.position = "right")
+
+ggplotly(p, tooltip = "text") |>
+  layout(hoverlabel = list(align = "left"))
+
+```
+
+The RFM analysis shows that the company’s customer base is strongly anchored by “*Loyal customers*” (25%) and a smaller but valuable group of “*Champions*” (6%), who together secure a significant portion of recurring revenue. Yet, the equally large share of “*At Risk*” customers (24%) highlights a pressing churn threat that could undermine future performance if not addressed. On the positive side, “Recent customers” (16%) and “*Potential Loyalists*” (13%) represent important opportunities for growth, as they can be nurtured into long-term loyal segments through targeted engagement and loyalty initiatives. Meanwhile, the “*Hibernating*” and “*Big Spenders at Risk*” groups (around 16% combined) indicate disengagement and require reactivation strategies to regain their contribution. To drive sustainable growth, the company should balance its efforts between s**afeguarding top-value clients**, **preventing churn in risk segments**, and accelerating the **conversion** of promising new customers. Closely tracking conversion and retention rates will be critical in defining whether retention, recovery, or acquisition should be prioritized in the short term.
+
+### Heatmap: average spend by *Recency* ans *Frequency*
+
+```{r}
+euro <- label_dollar(prefix = "€", big.mark = ",", decimal.mark = ".")
+
+heat_data <- rfm_segmented |>
+  group_by(R_score, F_score) |>
+  summarise(
+    avg_M   = mean(monetary, na.rm = TRUE),
+    n       = n(),
+    segment = names(which.max(table(segment))),  
+    .groups = "drop"
+  ) |>
+  mutate(
+    label_text = paste0(
+      "<b>R score:</b> ", R_score, "<br>",
+      "<b>F score:</b> ", F_score, "<br>",
+      "<b>Avg Monetary:</b> ", euro(avg_M), "<br>",
+      "<b>Customers:</b> ", comma(n), "<br>",
+      "<b>Segment:</b> ", segment
+    )
+  )
+
+p_heat <- ggplot(heat_data, aes(F_score, R_score, fill = avg_M, text = label_text)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = paste0("€", format(round(avg_M, 0), big.mark = ",", decimal.mark = "."))),
+            size = 3) +
+  scale_fill_gradient(
+    low = "#E8F1FB", high = "#2F5597",
+    labels = euro
+  ) +
+  scale_x_continuous(breaks = 1:5) +
+  scale_y_continuous(breaks = 1:5) +
+  labs(
+    title = "RFM Heatmap",
+    subtitle = "Color = average spend (Monetary) per R×F cell",
+    x = "F_score (Frequency)",
+    y = "R_score (Recency)",
+    fill = "Avg €"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"))
+
+ggplotly(p_heat, tooltip = "text") |>
+  layout(hoverlabel = list(align = "left"))
+```
+
+This heatmap shows that the highest-value customers are recent buyers with one or two purchases (around R≈4, F=1–2), where average spend tops €6,000. They should be a **top priority for VIP retention**. In contrast, very recent second-order customers (R≈5, F=2) spend less, pointing to a drop from the first to the second purchase; **protecting basket size** at that step is key. Segments with more orders deliver steadier but smaller averages (€4,000–€5,000), so the main lever there is **raising order value** (bundles, upgrades, subscriptions) rather than pushing for extra orders. There is also a pocket of older, mid-frequency buyers (R≈1, F≈3) with strong spend, making them good targets for **win-back campaigns**. In short: keep and **grow these recent high-ticket customers**, **fix the first-to-second purchase dip**, **re-engage valuable inactive buyers**, and **focus on bigger baskets for repeat buyers**.
+
+## Pareto / ABC analysis
+
+The Pareto / ABC analysis allows us to classify products based on their contribution to total sales, applying the 80/20 principle. This methodology helps us identify the few products (*Class A*) that drive the majority of revenues, the moderately contributing products (*Class B*), and the long tail of low-impact items (*Class C*). By segmenting the portfolio this way, the company can direct its efforts toward the areas with the greatest impact, ensuring both operations and commercial strategies remain focused on the key drivers of profitability.
+
+```{r, warning=FALSE, message=FALSE}
+pareto_data <- df |> 
+  group_by(nombre_del_producto) |> 
+  summarise(total_sales = sum(ventas, na.rm = TRUE), .groups = "drop") %>% 
+  arrange(desc(total_sales)) |> 
+  mutate(
+    rank      = row_number(),
+    cum_sales = cumsum(total_sales),
+    cum_pct   = cum_sales / sum(total_sales)
+  ) %>%
+  mutate(
+    ABC = case_when(
+      cum_pct <= 0.80 ~ "A",
+      cum_pct <= 0.95 ~ "B",
+      TRUE            ~ "C"
+    ),
+    cum_pct_scaled = cum_pct * max(total_sales, na.rm = TRUE)
+  )
+
+idx_A_end <- which(pareto_data$cum_pct >= 0.80)[1]
+idx_B_end <- which(pareto_data$cum_pct >= 0.95)[1]
+
+abc_cols <- c(
+  "A" = "#1B5E20",  
+  "B" = "#66BB6A",  
+  "C" = "#C8E6C9"   
+)
+
+lo <- loess(cum_pct_scaled ~ rank, data = pareto_data, span = 0.25)
+pareto_data <- pareto_data |> 
+  mutate(cum_loess = as.numeric(predict(lo, rank)))
+
+p_pareto <- ggplot(pareto_data, aes(x = rank)) +
+  geom_col(
+    aes(
+      y = total_sales, fill = ABC,
+      text = paste0(
+        "Product: ", nombre_del_producto, "<br>",
+        "Sales: €", format(round(total_sales, 0), big.mark = ",", decimal.mark = "."),
+        "<br>ABC: ", ABC
+      )
+    ),
+    width = 0.8, alpha = 0.95
+  ) +
+  geom_line(aes(y = cum_loess), color = "black", linewidth = 1.2) +
+  geom_point(
+    aes(
+      y = cum_loess,
+      text = paste0("Cumulative: ", percent(cum_pct, accuracy = 1))
+    ),
+    size = 0.5, alpha = 0
+  ) +
+  { if (!is.na(idx_A_end)) geom_vline(xintercept = idx_A_end, linetype = "dashed", color = "#1B5E20") } +
+  { if (!is.na(idx_B_end)) geom_vline(xintercept = idx_B_end, linetype = "dashed", color = "#66BB6A") } +
+  scale_fill_manual(values = abc_cols, name = "ABC Class") +
+  scale_y_continuous(
+    name = "Total Sales (€)",
+    labels = dollar_format(prefix = "€", big.mark = ",", decimal.mark = "."),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  labs(
+    title = "Pareto / ABC Analysis of Products",
+    subtitle = "Bars: product sales • Smooth line: cumulative share of total sales",
+    x = "Products (ordered by sales)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    plot.title = element_text(face = "bold"),
+    legend.position = "right"
+  )
+
+ggplotly(p_pareto, tooltip = "text")
+```
+
+The results confirm that a small group of products (Class A) is responsible for the largest share of revenue, underscoring the importance of protecting and further developing these key items through focused marketing and supply chain reliability. Class B products, while less critical, offer opportunities for cross-selling and incremental growth, while Class C items may require careful evaluation to avoid unnecessary complexity and cost. Overall, the analysis highlights that **concentrating resources on high-value products** while **rationalizing the tail can strengthen profitability** and support sustainable business expansion.
+
+## Cohort analysis
+
+The Cohort analysis allows us to measure customer retention over time by grouping clients based on when they made their first purchase. Instead of looking at all customers as a single block, it allows us to track how each acquisition wave behaves in the months that follow. With this approach we will be able to identify patterns of loyalty, highlight when churn begins, and evaluate the effectiveness of strategies aimed at turning first-time buyers into loyal customers.
+
+```{r, message=FALSE, warning=FALSE}
+ret_base <- df |> 
+  mutate(
+    fecha_de_pedido = as.Date(fecha_de_pedido),
+    order_month     = floor_date(fecha_de_pedido, "month")
+  ) |> 
+  group_by(id_cliente) |> 
+  mutate(cohort_month = floor_date(min(fecha_de_pedido), "month")) |> 
+  ungroup() |> 
+  mutate(period_number = floor(time_length(order_month - cohort_month, "months")))
+
+cohort_counts <- ret_base |> 
+  filter(period_number >= 1) |> 
+  group_by(cohort_month, period_number) |> 
+  summarise(returners = n_distinct(id_cliente), .groups = "drop")
+
+cohort_sizes <- ret_base |> 
+  filter(period_number == 0) |> 
+  count(cohort_month, name = "cohort_size")
+
+overall_curve <- cohort_counts |> 
+  left_join(cohort_sizes, by = "cohort_month") |> 
+  group_by(period_number) |> 
+  summarise(
+    buyers    = sum(returners, na.rm = TRUE),
+    at_risk   = sum(cohort_size, na.rm = TRUE),
+    retention = buyers / at_risk,
+    .groups = "drop"
+  ) |> 
+  arrange(period_number)
+
+overall_curve <- bind_rows(
+  tibble(
+    period_number = 0,
+    buyers        = NA_integer_,
+    at_risk       = sum(cohort_sizes$cohort_size),
+    retention     = 1
+  ),
+  overall_curve
+) |> 
+  arrange(period_number)
+
+col_line  <- "#2F5597"
+col_fill  <- "rgba(232,241,251,0.70)"  
+col_point <- "#F39C12"
+col_grid  <- "#D9DEE7"
+
+p <- plot_ly(overall_curve, x = ~period_number, y = ~retention, type = "scatter",
+             mode = "lines",
+             fill = "tozeroy", fillcolor = col_fill,
+             line = list(color = col_line, width = 3),
+             hovertemplate = paste0(
+               "<b>Month:</b> %{x}<br>",
+               "<b>Retention:</b> %{y:.1%}<extra></extra>"
+             )) |> 
+  add_markers(y = ~retention,
+              marker = list(size = 7, color = col_point),
+              hovertemplate = paste0(
+                "<b>Month:</b> %{x}<br>",
+                "<b>Retention:</b> %{y:.1%}<extra></extra>"
+              )) |> 
+  layout(
+    title = list(text = "Overall Repeat Purchase Rate"),
+    xaxis = list(title = "Months since first purchase", dtick = 1),
+    yaxis = list(title = "Repeat Purchase Rate", tickformat = ".0%", range = c(0, 1.05)),
+    shapes = list(list(type = "line",
+                       x0 = min(overall_curve$period_number), x1 = max(overall_curve$period_number),
+                       y0 = 1, y1 = 1,
+                       line = list(color = col_grid, dash = "dot"))),
+    hoverlabel = list(align = "left"),
+    margin = list(t = 60, r = 20, b = 60, l = 60)
+  )
+
+p
+```
+
+The analysis reveals that **retention plummets immediately after the initial purchase** (time 0), with only 16% returning in the first month. After this steep decline, repeat purchase rates stabilize at a much lower level, fluctuating between 16% and 27% across the following months. This indicates that the greatest challenge lies not in long-term loyalty but in securing a quick second purchase, most customers disengage right after their first transaction. To address this, the **company should prioritize strategies that trigger early re-engagement**, such as welcome campaigns, tailored promotions, or loyalty incentives within the first month, ensuring more customers transition into steady repeat buyers
+
+## Churn prediction (ML model)
+
+The churn analysis allows us to **anticipate which customers are most likely to stop buying** by combining key behavioral indicators such as recency, frequency, and purchase value. Rather than waiting to see who disengages, this approach provides an early warning system that highlights where churn risk is concentrated. By doing so, the company can act proactively, focusing resources on reactivation campaigns, loyalty programs, and targeted incentives to retain valuable clients before they are lost.
+
+```{r}
+churn_window_days <- 180
+
+snapshot_date <- max(df$fecha_de_pedido, na.rm = TRUE) + days(1)
+
+cust <- df |> 
+  arrange(id_cliente, fecha_de_pedido) |> 
+  group_by(id_cliente) |> 
+  summarise(
+    first_date  = min(fecha_de_pedido, na.rm = TRUE),
+    last_date   = max(fecha_de_pedido, na.rm = TRUE),
+    n_orders    = n_distinct(id_pedido),
+    total_sales = sum(ventas,   na.rm = TRUE),
+    total_units = sum(cantidad, na.rm = TRUE),
+    n_products  = n_distinct(nombre_del_producto),
+    .groups = "drop"
+  ) |> 
+  mutate(
+    recency_days   = as.integer(snapshot_date - last_date),
+    tenure_days    = as.integer(snapshot_date - first_date),
+    freq_per_month = n_orders / pmax(1, (tenure_days / 30)),
+    AOV            = ifelse(n_orders > 0, total_sales / n_orders, 0),
+    UPT            = ifelse(n_orders > 0, total_units / n_orders, 0),
+    churn          = as.integer(recency_days > churn_window_days)
+  )
+
+gaps <- df |> 
+  arrange(id_cliente, fecha_de_pedido) |> 
+  group_by(id_cliente) |> 
+  mutate(prev_date = lag(fecha_de_pedido)) |> 
+  summarise(
+    avg_gap_days = mean(as.numeric(fecha_de_pedido - prev_date), na.rm = TRUE),
+    .groups = "drop"
+  )
+
+last90 <- df |> 
+  filter(fecha_de_pedido >= snapshot_date - days(90)) |> 
+  group_by(id_cliente) |> 
+  summarise(sales_90d = sum(ventas, na.rm = TRUE), .groups = "drop")
+
+cust <- cust |> 
+  left_join(gaps,  by = 'id_cliente') |> 
+  left_join(last90, by = 'id_cliente') |> 
+  mutate(
+    avg_gap_days = ifelse(is.finite(avg_gap_days), avg_gap_days, NA_real_),
+    sales_90d    = replace_na(sales_90d, 0)
+  )
+
+set.seed(123)
+idx0 <- which(cust$churn == 0)
+idx1 <- which(cust$churn == 1)
+test0 <- sample(idx0, max(1, floor(0.2 * length(idx0))))
+test1 <- sample(idx1, max(1, floor(0.2 * length(idx1))))
+test_idx  <- sort(c(test0, test1))
+train_idx <- setdiff(seq_len(nrow(cust)), test_idx)
+
+train <- cust[train_idx, ]
+test  <- cust[test_idx, ]
+
+form <- churn ~ recency_days + n_orders + total_sales + AOV + UPT +
+               freq_per_month + tenure_days + avg_gap_days + sales_90d
+
+train_m <- train |>  select(all.vars(form)) |>  na.omit()
+test_m  <- test  |>  select(all.vars(form)) |>  na.omit()
+
+X_train <- train_m |> select(-churn)
+y_train <- factor(train_m$churn, levels = c(0, 1))
+X_test  <- test_m |> select(-churn)
+y_true  <- test_m$churn
+
+tbl <- table(y_train)
+min_class <- min(tbl)
+sampsize  <- c(min_class, min_class)
+
+set.seed(123)
+rf <- randomForest(
+  x = X_train,
+  y = y_train,
+  ntree = 500,
+  mtry  = max(1, floor(sqrt(ncol(X_train)))),
+  sampsize  = sampsize,
+  importance = TRUE,
+  na.action = na.omit
+)
+
+print(rf)
+print(head(importance(rf)))
+
+pred_prob <- predict(rf, X_test, type = "prob")[, "1"]
+
+cutoff <- 0.5
+pred_class <- ifelse(pred_prob >= cutoff, 1L, 0L)
+
+TP <- sum(pred_class == 1 & y_true == 1)
+TN <- sum(pred_class == 0 & y_true == 0)
+FP <- sum(pred_class == 1 & y_true == 0)
+FN <- sum(pred_class == 0 & y_true == 1)
+
+accuracy <- (TP + TN) / length(y_true)
+precision <- ifelse((TP + FP) > 0, TP / (TP + FP), NA_real_)
+recall    <- ifelse((TP + FN) > 0, TP / (TP + FN), NA_real_)
+f1        <- ifelse(is.na(precision) | is.na(recall) | (precision + recall) == 0,
+                    NA_real_, 2 * precision * recall / (precision + recall))
+
+cat(sprintf("RF — Accuracy: %.3f  Precision: %.3f  Recall: %.3f  F1: %.3f\n",
+            accuracy, precision, recall, f1))
+
+ths <- seq(0.20, 0.80, by = 0.02)
+get_f1 <- function(t) {
+  pc <- ifelse(pred_prob >= t, 1L, 0L)
+  TP <- sum(pc == 1 & y_true == 1); FP <- sum(pc == 1 & y_true == 0)
+  FN <- sum(pc == 0 & y_true == 1)
+  prec <- ifelse((TP+FP)>0, TP/(TP+FP), 0)
+  rec  <- ifelse((TP+FN)>0, TP/(TP+FN), 0)
+  if ((prec+rec)==0) return(0)
+  2*prec*rec/(prec+rec)
+}
+f1s <- sapply(ths, get_f1)
+best_t <- ths[which.max(f1s)]
+cat(sprintf("RF — Best threshold by F1: %.2f (F1=%.3f)\n", best_t, max(f1s)))
+
+newX <- cust |> 
+  select(all.vars(form)) |> 
+  select(-churn) |> 
+  randomForest::na.roughfix()  
+
+all_probs <- predict(rf, newdata = newX, type = "prob")[, "1"]
+
+scored_customers <- cust |> 
+  mutate(
+    churn_prob       = all_probs,                  
+    churn_prob_pct   = round(churn_prob * 100, 1), 
+    churn_prob_label = paste0(churn_prob_pct, "%")
+  ) |> 
+  arrange(desc(churn_prob))
+
+scored_customers |> 
+  select(id_cliente, churn_prob_pct, recency_days, n_orders, total_sales) |> 
+  head(20)
+```
+
+The churn prediction model, built using a Random Forest algorithm, achieved excellent performance with an accuracy of 95% and an F1 score of 1.0 at the optimal threshold. This indicates that **the model is highly effective at distinguishing between customers who are likely to churn and those who are not**.
+
+The most important driver of churn risk is **recency** (days since last purchase), confirming that inactivity is the strongest early-warning signal. Other relevant factors include purchase frequency and total sales, while average order value (AOV) and units per transaction (UPT) play a secondary role.
+
+From a strategic perspective, this means that **churn risk is not evenly distributed across the customer base**, customers who have not purchased in the last several months represent the highest risk group, even if their historical spending was high. By monitoring these signals and acting promptly (like reactivation campaigns after 60–90 days of inactivity), the company can prevent valuable clients from lapsing and allocate retention efforts where they will deliver the greatest impact.
+
+```{r}
+churn_plot_data <- scored_customers |> 
+  left_join(rfm_segmented |> select(id_cliente, segment), by = "id_cliente") |> 
+  mutate(segment = factor(segment, levels = seg_levels))
+
+churn_segment <- churn_plot_data |> 
+  group_by(segment) |> 
+  summarise(avg_churn = mean(churn_prob_pct, na.rm = TRUE), .groups = "drop") |> 
+  mutate(segment = fct_relevel(segment, seg_levels)) |> 
+  arrange(desc(avg_churn))
+
+ggplot(churn_segment,
+       aes(x = segment, y = avg_churn, fill = segment)) +
+  geom_col(alpha = 0.95, width = 0.75, show.legend = TRUE, color = "white") +
+  geom_text(aes(label = paste0(round(avg_churn, 1), "%")),
+            vjust = -0.35, size = 3.6) +
+  scale_fill_manual(values = seg_colors , drop = FALSE, name = "RFM Segment") +
+  scale_y_continuous(limits = c(0, 100), expand = expansion(mult = c(0, .08))) +
+  coord_flip() +
+  labs(title = "Churn Probability by RFM Segment",
+       subtitle = "Average predicted churn risk (%)",
+       x = "Segment", y = "Avg churn probability (%)") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"),
+        legend.position = "right")
+```
+
+This visualization shows how predicted churn risk varies across RFM segments. The highest-risk groups are "*At Risk*" (32%), "*Big Spenders at Risk*" (30%), and "*Hibernating*" (29%), confirming that disengaged or inactive clients are the most vulnerable to churn. In contrast, "*Champions*" (9%) and Loyal customers (16%) show much lower probabilities, though not zero, indicating that even valuable clients require consistent engagement to maintain loyalty.
+
+When read together with the churn model results, this segmentation highlights where proactive retention and reactivation initiatives will deliver the greatest business impact.
+
+## Strategic priorities for growth
+
+To turn these insights into results, focus on actions that protect current revenue, accelerate early repeat purchases, and lift lifetime value. The priorities below align resources to the highest-impact opportunities and set a clear operating rhythm.
+
+-   **Deepen relationships with high-value customers**. Provide VIP service, proactive follow-ups, and curated bundles, with priority on "*Champions*" and recent buyers with one or two purchases above €6,000.
+
+-   **Convert the first to the second purchase in month one**. Use onboarding journeys, timely recommendations, and a low-friction checkout and payment experience.
+
+-   **Increase basket value among frequent buyers**. Emphasize bundles, upgrades, and spend thresholds; measure success through average order value lift.
+
+-   **Reactivate risk segments**. "*Target at Risk*", "*Big Spenders at Risk*", and "*Hibernating*" groups with win-back offers and service check-ins, prioritizing older mid-frequency customers who still spend well.
+
+-   **Focus the product mix on Class A**. Protect stock and promotion on core items and rationalize the long tail that adds cost with limited revenue.
+
+-   **Operationalize churn monitoring**. Run the model on a regular cadence, trigger outreach after 60–90 days of inactivity, and assign clear owners and service levels.
+
+-   **Track a compact KPI set**. Second-purchase rate, month-one retention, average order value, share of revenue from Class A products, and churn in high-value segments, reviewed monthly.
